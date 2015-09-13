@@ -16,18 +16,21 @@ namespace MusicPlayer2
 
         public void open (string file)
         {
+            // issue commands to open a file
             string command = "open \"" + file + "\" type MPEGVideo alias MyMp3";
             mciSendString(command, null, 0, 0);
         }
 
         public void play ()
         {
+            // issue commands to play a file
             string command = "play MyMp3";
             mciSendString(command, null, 0, 0);
         }
 
         public void stop ()
         {
+            // issue commands to stop and close a file
             string command = "stop MyMp3";
             mciSendString(command, null, 0, 0);
 
